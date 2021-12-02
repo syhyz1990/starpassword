@@ -1,24 +1,37 @@
 <p align="center">
-  <a href="https://www.baiduyun.wiki">
-    <img width="160" src="https://www.baiduyun.wiki/logo.png" alt="星号密码显示助手">
+  <a href="https://www.baiduyun.wiki" title="点击访问">
+    <img width="100" height="100" src="https://www.baiduyun.wiki/logo.png">
   </a>
 </p>
 
 <h1 align="center">星号密码显示助手</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/tamperMonkey-v4.8-brightgreen.svg" alt="tampermonkey">
-  <img src="https://img.shields.io/badge/chrome%20x64-v76.0-brightgreen.svg" alt="chrome">
-  <img src="https://img.shields.io/badge/safari%20-v12.0-brightgreen.svg" alt="safari">
-  <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Mac%20%7C%20Android-blue.svg" alt="platform">
+  <img src="https://img.shields.io/badge/TamperMonkey-v4.13-brightgreen.svg" alt="tampermonkey">
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/license-AGPLv3.0-lightgrey.svg" alt="LICENSE">
+  </a>
+  <img src="https://img.shields.io/badge/Chrome-≥76.0-brightgreen.svg" alt="chrome">
+  <img src="https://img.shields.io/badge/Edge-≥88.0-brightgreen.svg" alt="edge">
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Mac%20%7C%20Linux-blue.svg" alt="platform">
+  <a href="https://www.baiduyun.wiki" title="点击访问">
+    <img src="https://img.shields.io/badge/Author-油小猴-red.svg">
+  </a>
 </p>
 
+<div align="center">
+  <strong>👉 鼠标停留在密码框时显示星号密码 👈</strong><br>
+  <sub>适用于 Linux，macOS，Windows 平台</sub>
+</div>
+<br>
 
-👉 **当鼠标停留在密码框时显示星号密码**。再也不担心忘记密码和输错密码了，比书签版更加强大，支持包括百度，QQ，阿里等在内的更多网站。
+**当鼠标停留在密码框时显示星号密码**。再也不担心忘记密码和输错密码了，比书签版更加强大，支持包括百度，QQ，阿里等在内的更多网站。
 
 ## 💽 安装地址
 
-[点击安装](https://www.baiduyun.wiki/tool/install-starpassword.html)
+- **[安装地址（官方）](https://www.baiduyun.wiki/tool/install-starpassword.html)**
+
+- **[安装地址（GreasyFork）](https://greasyfork.org/zh-CN/scripts/436454)**
 
 ## 🎨 助手效果
 
@@ -44,3 +57,6 @@
 ## 📜 特别说明
 
 本助手核心逻辑来自 [此处](https://github.com/a161803398/ShowPassword) 。在此表示感谢！
+
+## 💻 防止迷路
+![](https://cdn.jsdelivr.net/gh/youxiaohou/img/cmqN5niG6ER9oZ2.png)
