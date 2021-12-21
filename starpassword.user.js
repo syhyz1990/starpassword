@@ -1,16 +1,16 @@
 // ==UserScript==
 // @name              星号密码显示助手
 // @namespace         https://github.com/syhyz1990/starpassword
-// @version           1.0.1
-// @icon              https://cdn.jsdelivr.net/gh/youxiaohou/img/202110091412974.png
+// @version           1.0.2
+// @icon              https://unpkg.com/youxiaohou/202110091412974.png
 // @author            YouXiaoHou
 // @description       当鼠标停留在密码框时显示星号密码。再也不担心忘记密码和输错密码了。
 // @match             *://*/*
 // @license           MIT
-// @homepage          https://www.baiduyun.wiki/tool/install-starpassword.html
+// @homepage          https://www.youxiaohou.com/tool/install-starpassword.html
 // @supportURL        https://github.com/syhyz1990/starpassword
-// @require           https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.js
-// @resource          swalStyle https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.css
+// @require           https://unpkg.com/sweetalert2@10.15.6/dist/sweetalert2.min.js
+// @resource          swalStyle https://unpkg.com/sweetalert2@10.15.6/dist/sweetalert2.min.css
 // @run-at            document-start
 // @grant             GM_setValue
 // @grant             GM_getValue
@@ -118,7 +118,7 @@
                     icon: 'info',
                     showCloseButton: true,
                     confirmButtonText: '保存',
-                    footer: '<div style="text-align: center;font-size: 1em;">Powerd by <a href="https://www.baiduyun.wiki/tool/install-starpassword">油小猴</a></div>',
+                    footer: '<div style="text-align: center;font-size: 1em;">Powerd by <a href="https://www.youxiaohou.com/tool/install-starpassword">油小猴</a></div>',
                     customClass
                 }).then((res) => {
                     res.isConfirmed && history.go(0);
