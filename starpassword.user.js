@@ -1,16 +1,16 @@
 // ==UserScript==
 // @name              星号密码显示助手
 // @namespace         https://github.com/syhyz1990/starpassword
-// @version           1.0.2
-// @icon              https://unpkg.com/youxiaohou/202110091412974.png
+// @version           1.0.4
+// @icon              https://unpkg.com/youxiaohou@1.0.4/202110091412974.png
 // @author            YouXiaoHou
 // @description       当鼠标停留在密码框时显示星号密码。再也不担心忘记密码和输错密码了。
 // @match             *://*/*
 // @license           MIT
 // @homepage          https://www.youxiaohou.com/tool/install-starpassword.html
 // @supportURL        https://github.com/syhyz1990/starpassword
-// @require           https://unpkg.com/sweetalert2@10.15.6/dist/sweetalert2.min.js
-// @resource          swalStyle https://unpkg.com/sweetalert2@10.15.6/dist/sweetalert2.min.css
+// @require           https://unpkg.com/sweetalert2@10.16.6/dist/sweetalert2.min.js
+// @resource          swalStyle https://unpkg.com/sweetalert2@10.16.6/dist/sweetalert2.min.css
 // @run-at            document-start
 // @grant             GM_setValue
 // @grant             GM_getValue
@@ -21,45 +21,17 @@
 (function () {
     'use strict';
 
-    const fixedStyle = ['www.baidu.com']; //弹出框错乱的网站css插入到<html>而非<head>
     let MutationObserverNew = null;
-    const customClass = {
-        container: 'starpassword-container',
-        popup: 'starpassword-popup',
-        header: 'starpassword-header',
-        title: 'starpassword-title',
-        closeButton: 'starpassword-close',
-        icon: 'starpassword-icon',
-        image: 'starpassword-image',
-        content: 'starpassword-content',
-        htmlContainer: 'starpassword-html',
-        input: 'starpassword-input',
-        inputLabel: 'starpassword-inputLabel',
-        validationMessage: 'starpassword-validation',
-        actions: 'starpassword-actions',
-        confirmButton: 'starpassword-confirm',
-        denyButton: 'starpassword-deny',
-        cancelButton: 'starpassword-cancel',
-        loader: 'starpassword-loader',
-        footer: 'starpassword-footer'
-    };
 
     let util = {
         getValue(name) {
             return GM_getValue(name);
         },
+
         setValue(name, value) {
             GM_setValue(name, value);
         },
-        include(str, arr) {
-            for (let i = 0, l = arr.length; i < l; i++) {
-                let val = arr[i];
-                if (val !== '' && str.toLowerCase().indexOf(val.toLowerCase()) > -1) {
-                    return true;
-                }
-            }
-            return false;
-        },
+
         addStyle(id, tag, css) {
             tag = tag || 'style';
             let doc = document, styleDom = doc.getElementById(id);
@@ -68,9 +40,8 @@
             style.rel = 'stylesheet';
             style.id = id;
             tag === 'style' ? style.innerHTML = css : style.href = css;
-            let root = this.include(location.href, fixedStyle);
-            root ? doc.documentElement.appendChild(style) : doc.getElementsByTagName('head')[0].appendChild(style);
-        }
+            document.head.appendChild(style);
+        },
     };
 
     let main = {
@@ -99,8 +70,7 @@
         },
 
         registerMenuCommand() {
-            GM_registerMenuCommand('设置', () => {
-                this.addPluginStyle();
+            GM_registerMenuCommand('⚙️ 设置', () => {
                 let html = `<div style="font-size: 1em;">
                               <label class="starpassword-setting-label">显示密码方式
                               <select id="S-starpassword-show-method" class="starpassword-select">
@@ -119,7 +89,10 @@
                     showCloseButton: true,
                     confirmButtonText: '保存',
                     footer: '<div style="text-align: center;font-size: 1em;">Powerd by <a href="https://www.youxiaohou.com/tool/install-starpassword">油小猴</a></div>',
-                    customClass
+                    customClass: {
+                        container: 'starpassword-container',
+                        popup: 'starpassword-popup'
+                    }
                 }).then((res) => {
                     res.isConfirmed && history.go(0);
                 });
@@ -136,17 +109,22 @@
 
         addPluginStyle() {
             let style = `
+                .starpassword-container { z-index: 999999!important }
                 .starpassword-popup { font-size: 14px!important }
                 .starpassword-setting-label { display:flex; align-items: center; justify-content: space-between; padding-top: 18px; }
                 .starpassword-select { background: #f3fcff; height: 28px; width: 180px; line-height: 28px; border: 1px solid #9bc0dd; border-radius: 2px;}
             `;
-            util.addStyle('swal-pub-style', 'style', GM_getResourceText('swalStyle'));
-            util.addStyle('starpassword-style', 'style', style);
 
-            window.onload = () => {
+            if (document.head) {
                 util.addStyle('swal-pub-style', 'style', GM_getResourceText('swalStyle'));
                 util.addStyle('starpassword-style', 'style', style);
-            };
+            }
+
+            const headObserver = new MutationObserver(() => {
+                util.addStyle('swal-pub-style', 'style', GM_getResourceText('swalStyle'));
+                util.addStyle('starpassword-style', 'style', style);
+            });
+            headObserver.observe(document.head, {childList: true, subtree: true});
         },
 
         isTopWindow() {
@@ -304,6 +282,7 @@
             this.observer();
             this.initValue();
             this.showPassword();
+            this.addPluginStyle();
             this.isTopWindow() && this.registerMenuCommand();
         }
     };
