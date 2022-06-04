@@ -29,9 +29,7 @@
 
 ## 💽 安装地址
 
-- **[安装地址（官方）](https://www.youxiaohou.com/tool/install-starpassword.html)**
-
-- **[安装地址（GreasyFork）](https://greasyfork.org/zh-CN/scripts/436454)**
+- **[安装地址（推荐）](https://www.youxiaohou.com/tool/install-starpassword.html)**
 
 ## 🎨 助手效果
 
