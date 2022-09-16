@@ -1,8 +1,7 @@
 // ==UserScript==
 // @name              星号密码显示助手
 // @namespace         https://github.com/syhyz1990/starpassword
-// @version           1.0.4
-// @icon              https://unpkg.com/youxiaohou@1.0.4/202110091412974.png
+// @version           1.0.6
 // @author            YouXiaoHou
 // @description       当鼠标停留在密码框时显示星号密码。再也不担心忘记密码和输错密码了。
 // @match             *://*/*
@@ -16,6 +15,7 @@
 // @grant             GM_getValue
 // @grant             GM_registerMenuCommand
 // @grant             GM_getResourceText
+// @icon              data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBkPSJNMTAzLjkgNTEuMkg0Ni4xYy0xLjIgMC0yLjEtLjktMi4xLTIuMVYyOS44YzAtNy4xIDguOS0xNC45IDIwLTE0LjkgMTEgMCAyMCA3LjggMjAgMTQuOXY2LjRjLjYgMy42IDMuOCA2LjQgNy43IDYuNHM3LjItMi44IDcuNy02LjRoLjF2LTYuNEM5OS41IDEzLjQgODMuNiAwIDY0IDBTMjguNSAxMy40IDI4LjUgMjkuOFY0OWMwIDEuMi0uOSAyLjEtMi4xIDIuMUgyNGMtNy40IDAtMTMuMyA1LjctMTMuMyAxMi44djUxLjJjMCA3LjEgNiAxMi44IDEzLjMgMTIuOGg4MGM3LjQgMCAxMy4zLTUuNyAxMy4zLTEyLjh2LTUxYy0uMS03LjEtNi4xLTEyLjktMTMuNC0xMi45eiIgZmlsbD0iIzQ0NCIvPjxwYXRoIGQ9Ik02Ni44IDY2LjRsNCAxMi40Yy40IDEuMiAxLjUgMiAyLjggMmgxM2MyLjkgMCA0LjEgMy43IDEuNyA1LjRsLTEwLjUgNy42Yy0xIC44LTEuNSAyLjEtMS4xIDMuM2w0IDEyLjRjLjkgMi43LTIuMiA1LTQuNiAzLjNsLTEwLjUtNy42Yy0xLS44LTIuNC0uOC0zLjUgMGwtMTAuNSA3LjZjLTIuMyAxLjctNS41LS42LTQuNi0zLjNsNC0xMi40Yy40LTEuMiAwLTIuNi0xLjEtMy4zbC0xMC41LTcuNmMtMi4zLTEuNy0xLjEtNS40IDEuNy01LjRoMTNjMS4zIDAgMi40LS44IDIuOC0ybDQtMTIuNGMxLjItMi43IDUtMi43IDUuOSAweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==
 // ==/UserScript==
 
 (function () {
@@ -88,7 +88,7 @@
                     icon: 'info',
                     showCloseButton: true,
                     confirmButtonText: '保存',
-                    footer: '<div style="text-align: center;font-size: 1em;">Powerd by <a href="https://www.youxiaohou.com/tool/install-starpassword">油小猴</a></div>',
+                    footer: '<div style="text-align: center;font-size: 1em;">Powered by <a href="https://www.youxiaohou.com">油小猴</a></div>',
                     customClass: {
                         container: 'starpassword-container',
                         popup: 'starpassword-popup'
