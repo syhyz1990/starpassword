@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name              星号密码显示助手
 // @namespace         https://github.com/syhyz1990/starpassword
-// @version           1.0.6
+// @version           1.0.8
 // @author            YouXiaoHou
 // @description       当鼠标停留在密码框时显示星号密码。再也不担心忘记密码和输错密码了。
 // @match             *://*/*
 // @license           MIT
 // @homepage          https://www.youxiaohou.com/tool/install-starpassword.html
 // @supportURL        https://github.com/syhyz1990/starpassword
-// @require           https://unpkg.com/sweetalert2@10.16.6/dist/sweetalert2.min.js
-// @resource          swalStyle https://unpkg.com/sweetalert2@10.16.6/dist/sweetalert2.min.css
+// @require           https://registry.npmmirror.com/sweetalert2/10.16.6/files/dist/sweetalert2.min.js
+// @resource          swalStyle https://registry.npmmirror.com/sweetalert2/10.16.6/files/dist/sweetalert2.min.css
 // @run-at            document-start
 // @grant             GM_setValue
 // @grant             GM_getValue
