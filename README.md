@@ -33,7 +33,7 @@
 
 ## 🎨 助手效果
 
-![](https://cdn.jsdelivr.net/gh/youxiaohou/img/202110091426781.gif)
+![](https://pic.rmb.bdstatic.com/bjh/4e384d9f87e0d1f75c95d3423b8854144910.gif)
 
 ## 🔧 设置
 
@@ -44,7 +44,7 @@
 - `单击密码框时显示密码`
 - `按下 Ctrl 并单击密码框时显示密码`
 
-![](https://cdn.jsdelivr.net/gh/youxiaohou/img/202110091440907.png)
+![](https://pic.rmb.bdstatic.com/bjh/8a16e0b72ea465a6abb822ede294d79e896.png)
 
 可以在助手设置中重新找到本弹框。
 
