@@ -63,6 +63,3 @@
 ## 📜 特别说明
 
 本助手核心逻辑来自 [此处](https://github.com/a161803398/ShowPassword) 。在此表示感谢！
-
-## 💻 防止迷路
-![](https://cdn.jsdelivr.net/gh/youxiaohou/img/cmqN5niG6ER9oZ2.png)
